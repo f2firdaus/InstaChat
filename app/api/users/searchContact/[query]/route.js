@@ -1,0 +1,20 @@
+import User from "@/models/User";
+import connectToDb from "@/mongoDb"
+
+export const GET = async(req, { params })=> {
+    try {
+        await connectToDb();
+        const { query } = params;
+     
+    const searchedContacts = await User.find({
+        $or: [
+          { username: { $regex: query, $options: "i" } },
+          { email: { $regex: query, $options: "i" } }
+        ]
+      })
+  
+      return new Response(JSON.stringify(searchedContacts), { status: 200 })
+    } catch (err) {
+      return new Response("Failed to search contact", { status: 500 })
+    }
+}
