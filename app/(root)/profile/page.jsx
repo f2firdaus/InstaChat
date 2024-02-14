@@ -3,6 +3,7 @@ import Loader from "@/components/Loader";
 import { PersonOutline } from "@mui/icons-material";
 import { useSession } from "next-auth/react";
 import { CldUploadButton } from "next-cloudinary";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -78,7 +79,7 @@ const Profile = () => {
         )}
 
         <div className="flex items-center justify-between">
-          <img
+          <Image
             src={
               watch("profileImage") ||
               user?.profileImage ||

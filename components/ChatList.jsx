@@ -1,9 +1,10 @@
 "use client";
 import { useSession } from "next-auth/react";
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 import Loader from "./Loader";
 import ChatBox from "./ChatBox";
 import { pusherClient } from "@/lib/pusher";
+import { useEffect, useState } from "react";
 
 const ChatList = ({ currentChatId }) => {
   const { data: session } = useSession();
@@ -75,7 +76,7 @@ const ChatList = ({ currentChatId }) => {
       />
       <div className="chats">
         {chats.map((chat, index) => (
-          <ChatBox
+          <ChatBox key={index}
             chat={chat}
             index={index}
             currentUser={currentUser}

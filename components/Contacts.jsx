@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import Loader from "./Loader";
 import { CheckCircle, RadioButtonUnchecked } from "@mui/icons-material";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const Contacts = () => {
   const [loading, setLoading] = useState(true);
@@ -85,7 +86,7 @@ const router =useRouter()
                   <RadioButtonUnchecked />
                 )}
 
-                <img
+                <Image
                   src={user.profileImage || "/assets/person.jpg"}
                   alt="profile"
                   className="profilePhoto"

@@ -1,6 +1,7 @@
 'use client'
 import { Logout } from '@mui/icons-material';
 import { signOut, useSession } from 'next-auth/react';
+import Image from 'next/image';
 import Link from 'next/link'
 
 import { usePathname } from 'next/navigation'
@@ -19,7 +20,7 @@ const user =session?.user
   return (
     <div className="topbar">
     <Link href="/chats">
-      <img src="/assets/logo.png" alt="logo" className="logo" />
+      <Image src="/assets/logo.png" alt="logo" className="logo" />
     </Link>
 
     <div className="menu">
@@ -46,7 +47,7 @@ const user =session?.user
       />
 
       <Link href="/profile">
-        <img
+        <Image
           src={user?.profileImage || "/assets/person.jpg"}
           alt="profile"
           className="profilePhoto"

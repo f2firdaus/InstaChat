@@ -1,5 +1,6 @@
 "use client";
 import { format } from "date-fns";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 const ChatBox = ({ chat, currentUser, currentChatId }) => {
@@ -23,7 +24,7 @@ const ChatBox = ({ chat, currentUser, currentChatId }) => {
     >
       <div className="chat-info">
         {chat?.isGroup ? (
-          <img
+          <Image
             src={chat?.groupPhoto || "/assets/group.png"}
             alt="group-photo"
             className="profilePhoto"
