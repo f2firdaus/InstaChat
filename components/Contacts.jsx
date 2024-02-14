@@ -123,7 +123,7 @@ const router =useRouter()
           )}          
 
           <buttton className="btn" onClick={createChat}
-            disabled={selectedContacts.length === 0}>START A NEW CHAT</buttton>
+              disabled={selectedContacts.length === 0}>{selectedContacts.length > 1 ?"START A NEW GROUP":'START A NEW CHAT'} </buttton>
         </div>
       </div>
     </div>
