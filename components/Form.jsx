@@ -32,7 +32,7 @@ const Form = ({ type }) => {
       }
     }
     if (type === 'login') {
-      const response = await signIn('Credentials', {
+      const response = await signIn('credentials', {
         ...data,
         redirect: false
       })
