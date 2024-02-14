@@ -82,7 +82,8 @@ body{
 }
 
 .btn {
-  @apply flex items-center justify-center rounded-xl p-3 bg-gradient-to-l from-blue-1 to-blue-3 text-body-bold text-white;
+  @apply flex items-center justify-center rounded-xl p-3 bg-gradient-to-l from-blue-1 to-blue-3 text-body-bold text-white cursor-pointer;
+
 }
 
 /* Chat List */

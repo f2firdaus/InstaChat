@@ -1,7 +1,7 @@
 'use client'
 import ChatList from '@/components/ChatList'
 import Contacts from '@/components/Contacts'
-import { useSession } from 'next-auth/react'
+
 
 import React from 'react'
 
