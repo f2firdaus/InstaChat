@@ -32,7 +32,7 @@ const Form = ({ type }) => {
       }
     }
     if (type === 'login') {
-      const response = await signIn('credentials', {
+      const response = await signIn('Credentials', {
         ...data,
         redirect: false
       })
@@ -56,7 +56,7 @@ const Form = ({ type }) => {
   return (
     <div className="auth">
       <div className="content">
-        <img src="/assets/logo.png" alt="logo" width={200} height={200} />
+        <Image src="/assets/logo.png" alt="logo" width={200} height={200} />
         <form action="" className="form" onSubmit={handleSubmit(onSubmit)}>
           {type === "register" && (
             <div>

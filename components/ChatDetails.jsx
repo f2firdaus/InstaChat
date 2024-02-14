@@ -72,6 +72,7 @@ const ChatDetails = ({ chatId }) => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          // "Accept":'application/json'
         },
         body: JSON.stringify({
           chatId,
@@ -126,7 +127,7 @@ const ChatDetails = ({ chatId }) => {
                 <Image
                   src={chat?.groupPhoto || "/assets/group.png"}
                   alt="group-photo"
-                  className="profilePhoto"
+                  className="profilePhoto"  width={100} height={100}
                 />
               </Link>
 
@@ -142,7 +143,7 @@ const ChatDetails = ({ chatId }) => {
               <Image
                 src={otherMembers[0].profileImage || "/assets/person.jpg"}
                 alt="profile photo"
-                className="profilePhoto"
+                className="profilePhoto"  width={100} height={100}
               />
               <div className="text">
                 <p>{otherMembers[0].username}</p>
@@ -190,7 +191,7 @@ const ChatDetails = ({ chatId }) => {
           </div>
 
           <div onClick={sendText}>
-            <Image src="/assets/send.jpg" alt="send" className="send-icon" />
+            <Image src="/assets/send.jpg" alt="send" className="send-icon"  width={100} height={100} />
           </div>
         </div>
       </div>

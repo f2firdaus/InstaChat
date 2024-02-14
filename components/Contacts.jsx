@@ -89,7 +89,7 @@ const router =useRouter()
                 <Image
                   src={user.profileImage || "/assets/person.jpg"}
                   alt="profile"
-                  className="profilePhoto"
+                  className="profilePhoto"  width={100} height={100}
                 />
                 <p className="text-base-bold">{user.username}</p>
               </div>

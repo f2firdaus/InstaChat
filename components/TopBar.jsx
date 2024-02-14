@@ -20,7 +20,7 @@ const user =session?.user
   return (
     <div className="topbar">
     <Link href="/chats">
-      <Image src="/assets/logo.png" alt="logo" className="logo" />
+      <Image src="/assets/logo.png" alt="logo" className="logo" width={200} height={100} />
     </Link>
 
     <div className="menu">
@@ -50,7 +50,8 @@ const user =session?.user
         <Image
           src={user?.profileImage || "/assets/person.jpg"}
           alt="profile"
-          className="profilePhoto"
+            className="profilePhoto"
+            width={100} height={100}
         />
       </Link>
     </div>

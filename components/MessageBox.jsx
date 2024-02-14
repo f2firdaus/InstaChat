@@ -27,7 +27,7 @@ const MessageBox = ({ message, currentUser }) => {
         {message?.text ? (
           <p className="message-text-sender">{message?.text}</p>
         ) : (
-          <Image src={message?.photo} alt="message" className="message-photo" />
+          <Image src={message?.photo} alt="message" className="message-photo" width={100} height={100} />
         )}
       </div>
     </div>

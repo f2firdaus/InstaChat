@@ -45,6 +45,7 @@ const BottomBar = () => {
           src={user?.profileImage || "/assets/person.jpg"}
           alt="profile"
           className="profilePhoto"
+          width={100} height={100}
         />
       </Link>
     </div>
