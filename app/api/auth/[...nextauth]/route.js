@@ -7,7 +7,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 const handler = NextAuth({
   providers: [
     CredentialsProvider({
-      id:"Credentials",
+    
       name: "Credentials",
       async authorize(credentials, req) {
         if (!credentials.email || !credentials.password) {
